@@ -8,7 +8,9 @@ type IParams = {
   };
 };
 
-export async function POST(req: NextRequest, { params }: IParams) {
+type Params = Promise<{ slug: string }>;
+
+export async function POST(req: NextRequest, { params }: { params: Params }) {
   await connectDB();
 
   const body = await req.json();
