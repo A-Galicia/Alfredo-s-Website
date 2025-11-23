@@ -2,11 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/database/db';
 import Blog from '@/database/blogSchema';
 
-type IParams = {
-  params: {
-    slug: string;
-  };
-};
 
 type Params = Promise<{ slug: string }>;
 
