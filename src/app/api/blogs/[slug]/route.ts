@@ -38,12 +38,15 @@ type IParams = {
 	We need to include req, even though we don't use it here, so that we can access
 	the second argument
 */
-export async function GET(req: NextRequest, { params }: IParams) {
+
+type Params = Promise<{ slug: string }>;
+
+export async function GET(req: NextRequest, { params }: { params: Params }) {
   // If { params } looks confusing, check the note below this code block
 
   await connectDB(); // function from db.ts before
   const { slug } = await params; // another destructure
-  
+
   const fullSlug = 'blogs/' + slug; // DB slug format is blogs/slug-value
 
   try {
