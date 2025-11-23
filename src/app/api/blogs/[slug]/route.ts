@@ -2,9 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectDB from '@/database/db';
 import blogSchema from '@/database/blogSchema';
 
-type Params = Promise<{ slug: string }>;
-
-export async function GET(req: NextRequest, { params }: { params: Params }) {
+export async function GET(
+  req: NextRequest,
+  { params }: { params: Promise<{ slug: string }> }
+) {
   // If { params } looks confusing, check the note below this code block
 
   await connectDB(); // function from db.ts before
