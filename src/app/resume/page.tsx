@@ -1,9 +1,9 @@
-import Home from '@/components/Home';
+import Resume from '@/components/Resume';
 
 export default function Index() {
   return (
     <div>
-      <Home />
+      <Resume />
     </div>
   );
 }

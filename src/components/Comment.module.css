@@ -1,0 +1,31 @@
+.comment {
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0;
+  width: 250px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.h4 {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0;
+  place-self: start;
+}
+
+.span {
+  grid-column: 2;
+  grid-row: 1;
+  color: #474747;
+  place-self: start;
+}
+
+.p {
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  margin: 0;
+  place-self: start;
+}

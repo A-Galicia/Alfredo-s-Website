@@ -1,0 +1,118 @@
+.h1,
+.h2,
+.h3 {
+  margin-top: 0;
+  max-height: 400px;
+}
+
+.a {
+  color: #00aaff;
+  text-decoration: none;
+}
+.a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  place-self: center;
+  font-size: 2.5rem;
+}
+
+/* ========== Layout ========== */
+.main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 0 10px;
+}
+
+.pageTitle {
+  font-size: 2.5em;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+/* ========== About section ========== */
+.about {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 auto 24px;
+  max-width: 70%;
+}
+
+.aboutText p {
+  margin: 0;
+  color: #555;
+  font-size: 1.02rem;
+}
+
+.aboutImg {
+  height: 300px;
+  width: auto;
+}
+
+.aboutContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutGmail {
+  transform: translateY(-100px);
+}
+
+/* ========== image ========== */
+.img {
+  display: block;
+  max-width: 90%;
+  width: 400px;
+  height: auto;
+  margin: 10px auto 30px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.img:hover {
+  animation-duration: 2s;
+  animation-name: change-shadow;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes change-shadow {
+  from {
+    box-shadow: 0px 0px 0px 0px rgb(0, 0, 104);
+  }
+
+  to {
+    box-shadow: 0px 0px 100px 20px rgb(0, 0, 104);
+  }
+}
+
+@media (max-width: 450px) {
+  .about-image {
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+}
